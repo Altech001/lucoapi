@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
     cors: {
-        origin: ["https://<your-frontend-name>.onrender.com", "http://localhost:5173"], // Replace with your Render frontend URL
+        origin: ["https://lucowap.onrender.com", "http://localhost:5173"], // Replace with your Render frontend URL
         methods: ["GET", "POST"]
     }
 });
@@ -18,7 +18,7 @@ const port = process.env.PORT || 8001;
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ["https://<your-frontend-name>.onrender.com", "http://localhost:5173"], // Replace with your Render frontend URL
+    origin: ["https://lucowap.onrender.com", "http://localhost:5173"], // Replace with your Render frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
 }));
